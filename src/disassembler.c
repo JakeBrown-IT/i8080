@@ -75,6 +75,22 @@ int disassemble(unsigned char *buffer, int pc) {
     case 0x3d: printf("DCR    A"); break;
     case 0x3e: printf("MVI    A,#$%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
     case 0x3f: printf("CMC"); break;
+    case 0x40: printf("MOV    B,B"); break;
+    case 0x41: printf("MOV    B,C"); break;
+    case 0x42: printf("MOV    B,D"); break;
+    case 0x43: printf("MOV    B,E"); break;
+    case 0x44: printf("MOV    B,H"); break;
+    case 0x45: printf("MOV    B,L"); break;
+    case 0x46: printf("MOV    B,M"); break;
+    case 0x47: printf("MOV    B,A"); break;
+    case 0x48: printf("MOV    C,B"); break;
+    case 0x49: printf("MOV    C,C"); break;
+    case 0x4a: printf("MOV    C,D"); break;
+    case 0x4b: printf("MOV    C,E"); break;
+    case 0x4c: printf("MOV    C,H"); break;
+    case 0x4d: printf("MOV    C,L"); break;
+    case 0x4e: printf("MOV    C,M"); break;
+    case 0x4f: printf("MOV    C,A"); break;
   }
   // clang-format on
 }

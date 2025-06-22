@@ -123,6 +123,22 @@ int disassemble(unsigned char *buffer, int pc) {
     case 0x6d: printf("MOV    L,L"); break;
     case 0x6e: printf("MOV    L,M"); break;
     case 0x6f: printf("MOV    L,A"); break;
+    case 0x70: printf("MOV    M,B"); break;
+    case 0x71: printf("MOV    M,C"); break;
+    case 0x72: printf("MOV    M,D"); break;
+    case 0x73: printf("MOV    M,E"); break;
+    case 0x74: printf("MOV    M,H"); break;
+    case 0x75: printf("MOV    M,L"); break;
+    case 0x76: printf("HLT"); break;
+    case 0x77: printf("MOV    M,A"); break;
+    case 0x78: printf("MOV    A,B"); break;
+    case 0x79: printf("MOV    A,C"); break;
+    case 0x7a: printf("MOV    A,D"); break;
+    case 0x7b: printf("MOV    A,E"); break;
+    case 0x7c: printf("MOV    A,H"); break;
+    case 0x7d: printf("MOV    A,L"); break;
+    case 0x7e: printf("MOV    A,M"); break;
+    case 0x7f: printf("MOV    A,A"); break;
   }
   // clang-format on
 }

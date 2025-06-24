@@ -155,6 +155,22 @@ int disassemble(unsigned char *buffer, int pc) {
     case 0x8d: printf("ADC    L"); break;
     case 0x8e: printf("ADC    M"); break;
     case 0x8f: printf("ADC    A"); break;
+    case 0x90: printf("SUB    B"); break;
+    case 0x91: printf("SUB    C"); break;
+    case 0x92: printf("SUB    D"); break;
+    case 0x93: printf("SUB    E"); break;
+    case 0x94: printf("SUB    H"); break;
+    case 0x95: printf("SUB    L"); break;
+    case 0x96: printf("SUB    M"); break;
+    case 0x97: printf("SUB    A"); break;
+    case 0x98: printf("SBB    B"); break;
+    case 0x99: printf("SBB    C"); break;
+    case 0x9a: printf("SBB    D"); break;
+    case 0x9b: printf("SBB    E"); break;
+    case 0x9c: printf("SBB    H"); break;
+    case 0x9d: printf("SBB    L"); break;
+    case 0x9e: printf("SBB    M"); break;
+    case 0x9f: printf("SBB    A"); break;
   }
   // clang-format on
 }

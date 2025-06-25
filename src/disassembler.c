@@ -264,7 +264,7 @@ int disassemble(unsigned char *buffer, int pc) {
     case 0xEC: printf("CPE    $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
     case 0xED: printf("CALL   $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
     case 0xEE: printf("XRI    #$%02x", opcode[1]); opbytes = 2; break;
-    case 0xFF: printf("RST    5"); break;
+    case 0xEF: printf("RST    5"); break;
   }
   // clang-format on
 }

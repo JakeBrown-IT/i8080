@@ -265,6 +265,23 @@ int disassemble(unsigned char *buffer, int pc) {
     case 0xED: printf("CALL   $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
     case 0xEE: printf("XRI    #$%02x", opcode[1]); opbytes = 2; break;
     case 0xEF: printf("RST    5"); break;
+
+    case 0xF0: printf("RP"); break;
+    case 0xF1: printf("POP    PSW"); break;
+    case 0xF2: printf("JP     $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
+    case 0xF3: printf("DI"); break;
+    case 0xF4: printf("CP     $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
+    case 0xF5: printf("PUSH   PSW"); break;
+    case 0xF6: printf("ORI    #$%02x", opcode[1]); opbytes = 2; break;
+    case 0xF7: printf("RST    6"); break;
+    case 0xF8: printf("RM"); break;
+    case 0xF9: printf("SPHL"); break;
+    case 0xFA: printf("JM     $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
+    case 0xFB: printf("EI"); break;
+    case 0xFC: printf("CM     $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
+    case 0xFD: printf("CALL   $%02x%02x", opcode[2], opcode[1]); opbytes = 3; break;
+    case 0xFE: printf("CPI    #$%02x", opcode[1]); opbytes = 2; break;
+    case 0xFF: printf("RST    7"); break;
   }
   // clang-format on
 }
